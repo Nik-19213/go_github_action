@@ -13,7 +13,7 @@ jobs:
     
     ## Build Docker image with commit SHA tag
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag forbsey/go-api:${{ github.sha }}
+      run: docker build . --file Dockerfile --tag niks/go-api:${{ github.sha }}
 
     ## Publish image to Docker Hub
     - name: Publish to Docker Hub
