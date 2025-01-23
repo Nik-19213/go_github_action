@@ -13,13 +13,13 @@ jobs:
     
     ## Build Docker image with commit SHA tag
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag niks/go-api:${{ github.sha }}
+      run: docker build . --file Dockerfile --tag nitink1919/go-api:${{ github.sha }}
 
     ## Publish image to Docker Hub
     - name: Publish to Docker Hub
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
-        name: niks/go-api
+        name: nitink1919/go-api
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         tags: "latest,${{ github.sha }}"
